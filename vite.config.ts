@@ -6,13 +6,6 @@ export default defineConfig({
   assetsInclude: ["/sb-preview/runtime.js"],
   plugins: [react()],
   resolve: {
-    alias: [
-      { find: "@", replacement: path.resolve(__dirname, "src") },
-      { find: "@pages", replacement: path.resolve(__dirname, "src/pages") },
-      {
-        find: "@components",
-        replacement: path.resolve(__dirname, "src/components"),
-      },
-    ],
+    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
   },
 });

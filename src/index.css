@@ -9,6 +9,14 @@ html {
 
 @layer components {
   .flex-box {
-    @apply flex max-w-[1024px] items-center justify-between;
+    @apply flex max-w-[1024px] w-full items-center justify-between;
   }
+  .flex-center{
+    @apply flex items-center justify-center
+  }
+}
+
+
+.swiper-slide {
+  padding: 16px;
 }

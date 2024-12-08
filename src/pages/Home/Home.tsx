@@ -1,13 +1,13 @@
-import { MainBtn } from "../../components/Common/BtnBox/BtnBox";
+import MenuLayer from "@/components/MenuLayer/MenuLayer";
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <MainBtn bgColor="bg-mainColor">
-        <MainBtn.BtnText text="btntest"></MainBtn.BtnText>
-      </MainBtn>
+      <MenuLayer />
+      <Footer />
     </>
   );
 };
