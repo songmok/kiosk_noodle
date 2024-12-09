@@ -4,6 +4,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      _sm: { max: "1023px" },
+      _md: { min: "600px" },
+    },
     extend: {
       colors: {
         mainColor: '#005F73',

@@ -1,16 +1,38 @@
-import React from "react";
-import { BtnImgProps } from "../../../types/boxProps";
+import { BtnImgProps } from "@/types/boxProps";
 
-const WidgetBox = ({ children }: { children: React.ReactNode }) => {
+interface WidgetBoxProps {
+  children: React.ReactNode;
+  isEmpty?: boolean;
+}
+
+const WidgetBox = ({ children, isEmpty }: WidgetBoxProps) => {
   return (
-    <div className="flex flex-col justify-between items-center w-full h-[160px] p-[16px] bg-white border border-[#2B2D42] rounded-[16px]">
+    <div
+      className={`flex flex-col ${
+        isEmpty ? "justify-center" : "justify-between"
+      } items-center w-full h-[160px] p-[16px] bg-white border border-[#2B2D42] rounded-[16px]`}
+    >
       {children}
     </div>
   );
 };
 
+const CartText = ({ text }: { text: string }) => {
+  return (
+    <div className="flex items-center justify-center w-[128px] h-[96px]">
+      <span className="text-fz3 text-[#d9d9d9] font-bold">{text}</span>
+    </div>
+  );
+};
+
 const CartImg = ({ img, imgName }: BtnImgProps) => {
-  return <img className="w-[128px] h-[96px]" src={img} alt={imgName} />;
+  return (
+    <div className="w-[128px] h-[96px] bg-gray-200 flex items-center justify-center">
+      {img && (
+        <img className="w-full h-full object-cover" src={img} alt={imgName} />
+      )}
+    </div>
+  );
 };
 
 const QuantityControlBox = ({ children }: { children: React.ReactNode }) => {
@@ -21,7 +43,6 @@ const QuantityControlBox = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-// 수량 버튼
 const ControlButton = ({ img, imgName }: BtnImgProps) => {
   return (
     <div className="flex justify-center items-center w-[32px] h-[32px] bg-[#D9D9D9] rounded-full cursor-pointer">
@@ -43,4 +64,5 @@ export const CartWidget = Object.assign(WidgetBox, {
   QuantityControlBox: QuantityControlBox,
   ControlButton: ControlButton,
   QuantityDisplay: QuantityDisplay,
+  CartText: CartText,
 });

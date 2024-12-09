@@ -13,11 +13,13 @@ import PrevNextButton from "./PrevNextButton/PrevNextButton";
 const CartSlider = () => {
   const cartItems = [
     { id: 1, img: menuImg, imgName: "냉면", quantity: "1" },
-    { id: 2, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    { id: 3, img: menuImg, imgName: "라면", quantity: "3" },
-    { id: 4, img: menuImg, imgName: "라면1", quantity: "4" },
+    // { id: 2, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 3, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 4, img: menuImg, imgName: "비빔밥", quantity: "2" },
   ];
 
+  const totalSlots = 3;
+  const placeholderCount = totalSlots - cartItems.length;
   const sliderRef = useRef<SwiperRef>(null);
 
   const prevClickHandler = () => {
@@ -32,7 +34,7 @@ const CartSlider = () => {
     <div className="flex items-center max-w-[62.5%] w-full p-[16px]">
       <PrevNextButton direction="prev" onClick={prevClickHandler} />
       <Swiper
-        slidesPerView={3}
+        slidesPerView={totalSlots}
         centeredSlides={false}
         className="mySwiper"
         ref={sliderRef}
@@ -46,6 +48,13 @@ const CartSlider = () => {
                 <CartWidget.QuantityDisplay quantity={item.quantity} />
                 <CartWidget.ControlButton img={plusImg} imgName="plus" />
               </CartWidget.QuantityControlBox>
+            </CartWidget>
+          </SwiperSlide>
+        ))}
+        {Array.from({ length: placeholderCount }, (_, index) => (
+          <SwiperSlide key={`placeholder-${index}`}>
+            <CartWidget isEmpty={true}>
+              <CartWidget.CartText text="필동면옥" />
             </CartWidget>
           </SwiperSlide>
         ))}

@@ -1,10 +1,10 @@
 import { MainBtn } from "../Common/BtnBox/BtnBox";
-import cardImg from "../../assets/image/card.png";
+import cardImg from "@/assets/image/card.svg";
 import CartSlider from "./CartSlider/CartSlider";
 
 const Footer = () => {
   return (
-    <div className="flex-box h-[192px] fixed bottom-0">
+    <div className="flex-box h-[192px] fixed bottom-0 bg-[#f4f4f9]">
       <div className="flex w-full">
         {/* 장바구니 슬라이드 */}
         <CartSlider />

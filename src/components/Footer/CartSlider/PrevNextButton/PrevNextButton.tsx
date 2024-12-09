@@ -1,5 +1,5 @@
 import React from "react";
-import arrowImage from "@/assets/image/arrow.png";
+import arrowImage from "@/assets/image/arrow.svg";
 
 interface PrevNextButtonProps {
   direction: "prev" | "next";
@@ -16,7 +16,7 @@ const PrevNextButton: React.FC<PrevNextButtonProps> = ({
         src={arrowImage}
         alt={direction === "prev" ? "이전" : "다음"}
         style={{
-          transform: direction === "prev" ? "rotate(180deg)" : "none",
+          transform: direction === "prev" ? "none" : "rotate(180deg)",
         }}
       />
     </button>
