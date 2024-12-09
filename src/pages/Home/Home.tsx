@@ -5,9 +5,11 @@ import Header from "../../components/Header/Header";
 const Home = () => {
   return (
     <>
-      <Header />
-      <MenuLayer />
-      <Footer />
+      <div className="relative w-full h-screen">
+        <Header />
+        <MenuLayer />
+        <Footer />
+      </div>
     </>
   );
 };

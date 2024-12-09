@@ -1,4 +1,4 @@
 export interface BtnImgProps {
-  img: any;
+  img?: any;
   imgName: string;
 }

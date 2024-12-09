@@ -3,7 +3,7 @@ import { BtnImgProps } from "@/types/boxProps";
 const MenuBox = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
-      className={`flex-center justify-between flex-col w-[256px] h-[256px] p-[16px] bg-white border border-[#2B2D42] rounded-lg`}
+      className={`flex-center justify-between flex-col w-[256px] h-[256px] p-[16px] bg-white border border-[#2B2D42] rounded-[16px]`}
     >
       {children}
     </div>
