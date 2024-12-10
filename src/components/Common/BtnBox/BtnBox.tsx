@@ -12,7 +12,7 @@ interface BtnTextProps {
 const BtnBox = ({ children, bgColor }: BtnBoxProps) => {
   return (
     <div
-      className={`flex flex-col items-center justify-between w-[192px] h-[192px] p-[1.6rem] ${bgColor}`}
+      className={`flex flex-col items-center justify-between w-[192px] h-[192px] p-[1.6rem] ${bgColor} cursor-pointer`}
     >
       {children}
     </div>

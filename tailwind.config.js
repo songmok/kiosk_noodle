@@ -9,6 +9,10 @@ export default {
       _md: { min: "600px" },
     },
     extend: {
+      backgroundImage: {
+        'page-on': "url('@/assets/image/pageOn.svg')",
+        'page-off': "url('@/assets/image/pageOff.svg')",
+      },
       colors: {
         mainColor: '#005F73',
         mainLightColor: '#94D2BD',
