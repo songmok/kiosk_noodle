@@ -11,15 +11,18 @@ const PrevNextButton: React.FC<PrevNextButtonProps> = ({
   onClick,
 }) => {
   return (
-    <button onClick={onClick} className="w-[32px] h-[32px]">
-      <img
-        src={arrowImage}
-        alt={direction === "prev" ? "이전" : "다음"}
-        style={{
-          transform: direction === "prev" ? "none" : "rotate(180deg)",
-        }}
-      />
-    </button>
+    <div className="p-[16px]">
+      <button onClick={onClick}>
+        <img
+          src={arrowImage}
+          alt={direction === "prev" ? "이전" : "다음"}
+          className="w-[32px] h-[32px] max-w-max"
+          style={{
+            transform: direction === "prev" ? "none" : "rotate(180deg)",
+          }}
+        />
+      </button>
+    </div>
   );
 };
 

@@ -10,7 +10,7 @@ const WidgetBox = ({ children, isEmpty }: WidgetBoxProps) => {
     <div
       className={`flex flex-col ${
         isEmpty ? "justify-center" : "justify-between"
-      } items-center w-full h-[160px] p-[16px] bg-white border border-[#2B2D42] rounded-[16px]`}
+      } items-center w-[160px] h-[160px] p-[16px] bg-white border border-[#2B2D42] rounded-[16px]`}
     >
       {children}
     </div>

@@ -13,13 +13,18 @@ import PrevNextButton from "./PrevNextButton/PrevNextButton";
 const CartSlider = () => {
   const cartItems = [
     { id: 1, img: menuImg, imgName: "냉면", quantity: "1" },
-    // { id: 2, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    { id: 2, img: menuImg, imgName: "비빔밥", quantity: "2" },
     // { id: 3, img: menuImg, imgName: "비빔밥", quantity: "2" },
     // { id: 4, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
+    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
   ];
-
   const totalSlots = 3;
-  const placeholderCount = totalSlots - cartItems.length;
+  const placeholderCount = Math.max(0, totalSlots - cartItems.length);
   const sliderRef = useRef<SwiperRef>(null);
 
   const prevClickHandler = () => {
@@ -31,10 +36,11 @@ const CartSlider = () => {
   };
 
   return (
-    <div className="flex items-center max-w-[62.5%] w-full p-[16px]">
+    <div className="flex items-center justify-between max-w-[640px] w-full">
       <PrevNextButton direction="prev" onClick={prevClickHandler} />
       <Swiper
-        slidesPerView={totalSlots}
+        slidesPerView={3}
+        spaceBetween={16}
         centeredSlides={false}
         className="mySwiper"
         ref={sliderRef}

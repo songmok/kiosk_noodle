@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header";
 const Home = () => {
   return (
     <>
-      <div className="relative w-full h-screen">
+      <div className="relative w-[1024px] h-[1440px] fullscreen">
         <Header />
         <MenuLayer />
         <Footer />

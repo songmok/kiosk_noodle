@@ -19,9 +19,11 @@ const MenuPrice = ({ text }: { text: string }) => {
 
 const MenuImg = ({ img, imgName }: BtnImgProps) => {
   return (
-    <div className="w-[170px] h-[128px]">
-      <img src={img} alt={imgName} />
-    </div>
+    <div
+      className="max-w-[170px] w-full h-[128px] bg-cover bg-center"
+      style={{ backgroundImage: `url(${img})` }}
+      aria-label={imgName}
+    ></div>
   );
 };
 
