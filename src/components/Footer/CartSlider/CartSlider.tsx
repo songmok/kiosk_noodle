@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { useRef } from "react";
-import menuImg from "@/assets/image/menu1.png";
+
 import minusImg from "@/assets/image/minusBtn.svg";
 import plusImg from "@/assets/image/plusBtn.svg";
 
@@ -9,20 +9,9 @@ import "swiper/css/navigation";
 
 import { CartWidget } from "@/components/Common/CartBox/CartBox";
 import PrevNextButton from "./PrevNextButton/PrevNextButton";
+import { cartItems } from "@/apis/data/dummyMenu";
 
 const CartSlider = () => {
-  const cartItems = [
-    { id: 1, img: menuImg, imgName: "냉면", quantity: "1" },
-    { id: 2, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 3, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 4, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
-    // { id: 5, img: menuImg, imgName: "비빔밥", quantity: "2" },
-  ];
   const totalSlots = 3;
   const placeholderCount = Math.max(0, totalSlots - cartItems.length);
   const sliderRef = useRef<SwiperRef>(null);

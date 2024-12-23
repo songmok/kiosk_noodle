@@ -20,7 +20,7 @@ export default {
       fontSize: {
         fz1: "4.8rem",
         fz2: "3.2rem",
-        fz3: "2.4rem",
+        fz3: "2.4rem"
       },
     },
   },
