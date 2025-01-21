@@ -14,13 +14,19 @@ export default {
         'page-off': "url('@/assets/image/pageOff.svg')",
       },
       colors: {
-        mainColor: '#005F73',
-        mainLightColor: '#94D2BD',
+        blueColor: '#242771',
+        textBlackColor: '#111111',
+        textGrayColor: '#767676',
+        textGray2Color: '#808080',
+        textRedColor: '#E53939',
+        textBrownColor: '#E53939',
+        textDarkLiverColor: '#E53939',
+        bgColor: `#F4EFE9`
       },
       fontSize: {
         fz1: "4.8rem",
         fz2: "3.2rem",
-        fz3: "2.4rem"
+        fz3: "2.4rem",
       },
     },
   },

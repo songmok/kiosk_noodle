@@ -1,19 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
-  font-size: 62.5%;
   overflow-y: scroll;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Pretendard-Regular";
   background: #f4f4f9;
 }
-.swiper-slide {
-  /* width: calc(100% / 3) !important; */
+span {
+  letter-spacing: -0.025em;
+}
+.letterOn {
+  letter-spacing: -0.025em;
+}
+.noLetter {
+  letter-spacing: 0;
 }
 .swiper {
   width: 100% !important;
@@ -24,10 +36,13 @@ body {
   justify-self: center !important;
 }
 @layer components {
-  .flex-box {
-    @apply flex w-full items-center justify-between;
+  .langMain {
+    @apply flex flex-col items-center justify-center h-[1700px];
   }
-  .flex-center {
-    @apply flex items-center justify-center;
+  .langOption {
+    @apply flex flex-col items-center h-[1740px];
   }
+}
+span {
+  text-decoration: none;
 }
